@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
-import VideoFooter from "./components/footer/VideoFooter";
-import "./Video.css";
+import VideoFooter from "./components/footer/VideoFooter"
+import "./video.css";
 
 function Video() {
   const videoRef = useRef(null);
@@ -8,10 +8,10 @@ function Video() {
 
   function handdleStart() {
     if (play) {
-      videoRef.current.play();
+      videoRef.current.pause();
       setPlay(false);
     } else {
-      videoRef.current.pause();
+      videoRef.current.play();
       setPlay(true);
     }
   }
@@ -25,7 +25,8 @@ function Video() {
         loop
         src="https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/brecker2.mp4?t=2023-05-22T19%3A37%3A45.885Z"
       ></video>
-      <VideoFooter />
+      {/* Side bar*/}
+      <VideoFooter/>
     </div>
   );
 }
